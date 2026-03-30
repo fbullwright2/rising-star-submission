@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG and Sustainability Analytics Portfolio | Florence Bullwright</title>
+    <!-- Load Tailwind CSS via CDN for single-file simplicity -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for a custom color palette focused on dark backgrounds and bright accents -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // DARK COLOR SCHEME (Adjusted to lighter Turquoise Green)
+                        'bg-dark-main': '#134444', // Darker Turquoise Green (New Main Background)
+                        'text-light': '#ccf5e7', // Light Turquoise Green (Main Text Color)
+                        'card-bg': '#ffffff', // Clean white for cards
+                        'highlight-accent': '#38a169', // Stronger, classic Green (Accents/Links)
+                        'medium-accent': '#06908f', // Strong Teal/Turquoise (Secondary accents/headers)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for section headings - Using medium accent */
+        .section-heading {
+            border-bottom: 2px solid #06908f; /* Medium Accent underline */
+            padding-bottom: 0.5rem;
+        }
+        /* Custom scrollbar for aesthetics (optional, may not work in all browsers) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38a169; /* Highlight accent */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #134444; /* New Dark Background */
+        }
+
+        /* --- Custom CSS for Timeline Effect (Reworked for Alignment) --- */
+        
+        /* Container holds the line - Removed padding-left to manage offset on the item itself */
+        .timeline-container {
+            /* Keep relative position for the ::before line to work */
+            position: relative;
+        }
+
+        /* The vertical line (Positioned centrally in the 80px margin space) */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 49px; /* Center of line is 50px */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: rgba(56, 161, 105, 0.5); /* Highlight Green semi-transparent line */
+            z-index: 5;
+        }
+
+        /* The item container (Pushed 80px to the right to create the gutter) */
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            margin-left: 80px; /* Pushes the card 80px right, creating the space for the line/dot */
+        }
+
+        /* The circle/dot on the timeline (Offset to sit in the gutter area) */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            /* -37px = (43px absolute position) - (80px item start position) */
+            left: -37px; 
+            top: 6px; /* Vertical alignment with the card's top content */
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #38a169; /* Highlight Green dot */
+            border: 3px solid #134444; /* New Dark body background border for contrast */
+            z-index: 10;
+        }
+        /* --- End Timeline CSS --- */
+    </style>
+</head>
+
+<body class="bg-bg-dark-main text-text-light font-sans antialiased">
+
+    <!-- Navigation Bar (Fixed) -->
+    <nav class="sticky top-0 z-50 bg-card-bg shadow-lg backdrop-blur-sm bg-opacity-95 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold tracking-tight text-highlight-accent hover:text-medium-accent transition duration-300">
+                    Florence Bullwright
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-bg-dark-main hover:bg-highlight-accent hover:text-white transition duration-300">About</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-bg-dark-main hover:bg-highlight-accent hover:text-white transition duration-300">Skills</a>
+                    <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium text-bg-dark-main hover:bg-highlight-accent hover:text-white transition duration-300">Timeline</a>
+                    <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-bg-dark-main hover:bg-highlight-accent hover:text-white transition duration-300">Projects</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-bg-dark-main hover:bg-highlight-accent hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- 1. HEADER / ABOUT ME SECTION (Image, Text in box) -->
+        <section id="about" class="pt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <!-- Image (size increased to w-72 h-92) -->
+            <div class="md:col-span-1 flex justify-center md:justify-start items-start pt-8">
+                <div class="flex-shrink-0 w-72 h-72 rounded-full overflow-hidden bg-medium-accent border-4 border-highlight-accent shadow-xl">
+                    <!-- Photo -->
+                     <img class="w-full h-full object-contain" src="untitled folder/IMG_0843 2.png" alt="Florence" /> 
+                      
+                    
+                </div>
+            </div>
+            
+
+    
+       
+
+
+
+
+            <!-- Content Box (spans 3 columns) -->
+            <div class="md:col-span-3 p-8 bg-card-bg rounded-2xl shadow-2xl border border-gray-100 text-center md:text-left text-bg-dark-main">
+                <h1 class="text-5xl font-extrabold text-highlight-accent mb-2">
+                   Florence Bullwright
+                </h1>
+                <h2 class="text-2xl text-gray-700 mb-6">
+                    ESG Transformation & Sutainability Analytics Consultant
+                </h2>
+                <p class="text-lg leading-relaxed text-gray-800 max-w-2xl mx-auto md:mx-0">
+                    I specialize in transforming complex Environmental, Social, and Governance (ESG) data into actionable insights and digital solutions that drive sustainability performance. With a passion for climate action and systems thinking, I develop tools and strategies that help organizations achieve net-zero goals, ensure regulatory compliance, and foster positive impact across supply chains and operations
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. SKILLS SECTION -->
+        <section id="skills" class="py-16">
+            <h2 class="text-4xl font-bold section-heading text-medium-accent mb-10">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill Group Card 1 -->
+                <div class="p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-lg hover:shadow-highlight-accent/50 transition duration-300 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-highlight-accent mb-3">ESG & Sustainability</h3>
+                    <ul class="list-disc ml-5 text-gray-800 space-y-1">
+                        <li>ESG Reporting: GRI & SDG's</li>
+                        <li>Net-Zero Strategy and GHG Protocol Scope 3 Emissions</li>
+                        <li>Social Value Monetization: GreenBook & TOMs System</li>
+                        <li>Supply Chain Due Diligence & Carbon Reduction Roadmaps</li>
+                    </ul>
+                </div>
+                <!-- Skill Group Card 2 -->
+                <div class="p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-lg hover:shadow-highlight-accent/50 transition duration-300 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-highlight-accent mb-3">Programming & Data</h3>
+                    <ul class="list-disc ml-5 text-gray-800 space-y-1">
+                        <li>Statistical Analysis: SPSS & Excel </li>
+                        <li>LCA: One-ClickLCA and OpenLCA</li>
+                        <li>Data Visualization: PowerBi & MS Fabric</li>
+                        <li>Coding: Overleaf & Matlab</li>
+                    </ul>
+                </div>
+                <!-- Skill Group Card 3 -->
+                <div class="p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-lg hover:shadow-highlight-accent/50 transition duration-300 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-highlight-accent mb-3">Soft Skills</h3>
+                    <ul class="list-disc ml-5 text-gray-800 space-y-1">
+                        <li>Project Management: Agile, 6Sigma & Design-led</li>
+                        <li>Strategic Communication & Reporting</li>
+                        <li>Change Management for Sustainability Transitions: Kaizen & McKinsey 7-S Framework</li>
+                        <li> Stakeholder Engagement & ESG Training: Workshops, Presentations & Forums</li>
+                    </ul>
+                </div>
+                <!-- Skill Group Card 4 -->
+                <div class="p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-lg hover:shadow-highlight-accent/50 transition duration-300 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-highlight-accent mb-3">Digital Tools</h3>
+                    <ul class="list-disc ml-5 text-gray-800 space-y-1">
+                        <li>Productivity: Microsoft Office Suite & MS Teams</li>
+                        <li>Collaberation: Google Workspace (Docs, Sheets, Slides)</li>
+                        <li>Creativity & Project Management: Canva, Trello & Notion</li>
+                        <li>Data Analysis & Reporting: PowerBi, OpenLCA & Excel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EXPERIENCE SECTION (Education & Professional Timeline) -->
+        <section id="experience" class="py-16">
+            <h2 class="text-4xl font-bold section-heading text-medium-accent mb-10">Education & Professional Timeline</h2>
+            
+            <div class="relative timeline-container">
+
+                <!-- TIMELINE ITEM 1: EDUCATION (Top of Timeline) -->
+                <div class="timeline-item p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-2xl font-semibold text-bg-dark-main">1st Class (Hons) Bachelors of Sciences and Arts in Global Sustainable Development and Life Sciences (Ecology Pathway)</h3>
+                        <span class="text-sm font-medium text-highlight-accent">[2022 - 2025]</span>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-3">Univerity of Warwick - Coventry, CV4 7ES</p>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                        <li>Thesis on 'A comparative analysis of generational perspectives on Life Cycle Assessments and Sustainable Development within the Construction Industry'.</li>
+                        <li>Modules on: Sustainable Development Principles; Energy Security, Equity & Sustainability; Environmental Science (Mitigation, Management & Ecology); Sutainable Engineering and Innovation.</li>
+                    </ul>
+                </div>
+
+                <!-- TIMELINE ITEM 2: PROFESSIONAL EXPERIENCE 1 -->
+                <div class="timeline-item p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-2xl font-semibold text-bg-dark-main">ESG Coordinator</h3>
+                        <span class="text-sm font-medium text-highlight-accent">[2025 - Present]</span>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-3">The Deeley Group - Coventry, CV5 6UB</p>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                        <li>Analysed Scope 1, 2, and 3 GHG emissions across 14 construction sites,  highlighting reductions for 70% of the supply chain.</li>
+                        <li>Designed an ESG dashboard tracking 15 ESG KPIs, improving visibility of sustainability performance across multiple departments and supporting strategic decision-making on carbon reduction and social value initiatives.</li>
+                        <li>Presented a 40-slide roadmap and 12-slide financial breakdown of NZC initiatives to 7 key stakeholders across departments.</li>
+                    </ul>
+                </div>
+
+                <!-- TIMELINE ITEM 3: PROFESSIONAL EXPERIENCE 2 -->
+                <div class="timeline-item p-6 bg-card-bg text-bg-dark-main rounded-xl shadow-2xl transition duration-300 hover:scale-[1.02] border border-gray-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-2xl font-semibold text-bg-dark-main">Associate Consultant (NGO & Sustainability Clients)</h3>
+                        <span class="text-sm font-medium text-highlight-accent">[2024 - 2025]</span>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-3">180 Degrees Consulting - Remote - Nationwide</p>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-2">
+                        <li>Sustainability Startup: Advised client on developing carbon credit strategies, projecting £370K revenue and 0.8-year break-even for the removal option versus 108 years for avoidance, unlocking decarbonisation and new revenue streams.</li>
+                        <li>Urban Mobility Engineering Client: Developed a cost-benefit analysis for 6 digital twin technologies, created a seed-funding plan, and delivered 3 deliverables (20+ slides each), providing strategic insights.</li>
+                    </ul>
+                </div>
+
+               
+                
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS SECTION (TABS UI) -->
+        <section id="projects" class="py-16">
+            <h2 class="text-4xl font-bold section-heading text-medium-accent mb-8">Key Projects</h2>
+            
+            <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                <!-- Tab Buttons (Flex container for horizontal tabs) -->
+                <div class="flex flex-col sm:flex-row border-b border-gray-700 bg-bg-dark-main" id="tab-list">
+                    <!-- Tab Button 1: Tracker -->
+                    <button id="tab-button-water" data-tab-id="water" class="tab-button flex-1 py-4 px-6 text-lg font-semibold transition duration-300 cursor-pointer text-text-light bg-bg-dark-main hover:bg-highlight-accent hover:text-bg-dark-main sm:rounded-tl-xl">
+                      Hydrogen Carbon Credit Framework
+                    </button>
+                    <!-- Tab Button 2: Analytics -->
+                    <button id="tab-button-solar" data-tab-id="solar" class="tab-button flex-1 py-4 px-6 text-lg font-semibold transition duration-300 cursor-pointer text-text-light bg-bg-dark-main hover:bg-highlight-accent hover:text-bg-dark-main border-y sm:border-y-0 sm:border-x border-gray-700">
+                        Financial Dashboard
+                    </button>
+                    <!-- Tab Button 3: ESG  -->
+                    <button id="tab-button-esg" data-tab-id="esg" class="tab-button flex-1 py-4 px-6 text-lg font-semibold transition duration-300 cursor-pointer text-text-light bg-bg-dark-main hover:bg-highlight-accent hover:text-bg-dark-main sm:rounded-tr-xl">
+                        Impact Strategy Slide Deck
+                    </button>
+                </div>
+
+                <!-- Tab Content Area -->
+                <div id="tab-content" class="p-8 bg-card-bg text-bg-dark-main">
+                    
+                    <!-- Project Panel 1: Water Tracker -->
+                    <div id="project-panel-water" class="project-panel hidden">
+                        <h3 class="text-3xl font-bold text-highlight-accent mb-3">Hydrogen Carbon Credit Framework</h3>
+                          <p class="text-gray-700 italic mb-4">Carbon Credit Methodology</p>
+                        <p class="text-gray-800 mb-6">
+                            Inspired by work with a university society client (though not a direct deliverable), I developed a carbon credit methodology grounded in physics-based equations to ensure permanence and minimize leakage. I outlined the key specifications of robust carbon credits (permanence, leakage, and additionality) and demonstrated, through equations and references, how the conversion of methane into hydrogen and graphene within this methodology satisfies these criteria. The methodology was documented and coded in Overleaf, further strengthening my technical writing and coding ability.
+                        <div class="mt-4">
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Skill : Technical Report Writing & Coding</span>
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Software: Overleaf</span>
+                        </div>
+                        <a href="https://github.com/fbullwright2/Hydrogen-Project" target="https://github.com/fbullwright2/Hydrogen-Project" class="mt-6 inline-flex items-center text-highlight-accent hover:text-medium-accent font-medium transition duration-300">
+                            View Project on GitHub
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://github.com/fbullwright2/Hydrogen-Project"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-4l-5 5M17 7l-5-5"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Project Panel 2: Solar Analytics -->
+                    <div id="project-panel-solar" class="project-panel hidden">
+                        <h3 class="text-3xl font-bold text-highlight-accent mb-3"> Financial Dashboard </h3>
+                        <p class="text-gray-700 italic mb-4">Dashboard</p>
+                        <p class="text-gray-800 mb-6">
+                           I developed a comprehensive Power BI dashboard that integrates data from 5 Excel sheets. I established complex relationships between 17 variables (allowing for cross and stacked reporting), designed a variety of interactive visuals, and reported on key performance indicators (KPIs). I leveraged DAX sum functions & I built hierarchies that enabled drill-down capabilities, providing deeper insights and flexible data exploration.
+                        </p>
+                        <div class="mt-4">
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Skill: PowerBi (Data Visualisation and Analysis) & Excel (Data Curation)</span>
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Skills: Problem-solving & Innovation</span>
+                        </div>
+                        <a href="https://github.com/fbullwright2/Sales-Dashboard" target="_blank" class="mt-6 inline-flex items-center text-highlight-accent hover:text-medium-accent font-medium transition duration-300">
+                            View Project on GitHub
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://github.com/fbullwright2/Sales-Dashboard"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-4l-5 5M17 7l-5-5"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Project Panel 3: ESG Screener -->
+                    <div id="project-panel-esg" class="project-panel hidden">
+                        <h3 class="text-3xl font-bold text-highlight-accent mb-3">Strategy Impact Slide Deck</h3>
+                        <p class="text-gray-700 italic mb-4">Slide Deck</p>
+                        <p class="text-gray-800 mb-6">
+                            I created a slide deck as part of a university society project, built around a fictional but detailed case study. The deck has been refined to enhance readability and clarity, presenting 3 core strategic decisions supported by both qualitative and quantitative data. Each decision is justified in alignment with the fictional company’s mission, ensuring a cohesive and well-structured narrative.
+                            </p>
+                        <div class="mt-4">
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Data:180 DC Mock Case Study</span>
+                            <span class="inline-block bg-text-light text-bg-dark-main text-sm font-medium px-3 py-1 rounded-full mr-2">Skill: Data Analysis, Synthesis & Strategy Communications</span>
+                        </div>
+                        <a href="https://github.com/fbullwright2/Strategy-Deck" target="_blank" class="mt-6 inline-flex items-center text-highlight-accent hover:text-medium-accent font-medium transition duration-300">
+                            View Project on GitHub
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="https://github.com/fbullwright2/Strategy-Deck"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-4l-5 5M17 7l-5-5"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CERTIFICATIONS SECTION -->
+        <section id="certifications" class="py-16">
+            <h2 class="text-4xl font-bold section-heading text-medium-accent mb-10">Certifications & Training</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Certification 1 -->
+                <div class="p-5 bg-card-bg text-bg-dark-main rounded-xl shadow-md border-b-4 border-highlight-accent border border-gray-100">
+                    <h3 class="text-xl font-semibold text-bg-dark-main mb-1">CSRD Fundementals Cerification</h3>
+                    <p class="text-gray-700">Corperate Social Responsibility Directive (CSRD) Fundementals L1; Trained in ESG Governance and EU legislation.</p>
+                    <p class="text-sm text-gray-500 mt-2">CSRD Institute | 2025</p>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="p-5 bg-card-bg text-bg-dark-main rounded-xl shadow-md border-b-4 border-highlight-accent border border-gray-100">
+                    <h3 class="text-xl font-semibold text-bg-dark-main mb-1">Sustainable Construction and Development</h3>
+                    <p class="text-gray-700">Trained in Construction-specific sustainability challenges and solutions.</p>
+                    <p class="text-sm text-gray-500 mt-2">CIOB | 2025</p>
+                </div>
+
+                <!-- Certification 3 -->
+                <div class="p-5 bg-card-bg text-bg-dark-main rounded-xl shadow-md border-b-4 border-highlight-accent border border-gray-100">
+                    <h3 class="text-xl font-semibold text-bg-dark-main mb-1">Career Catalyst - Powered by XPO</h3>
+                    <p class="text-gray-700">A Hackathon style 3-day workshop with logistics company XPO, reimaging their HR and early recruitment process.</p>
+                    <p class="text-sm text-gray-500 mt-2">Enactus | 2025</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6. CONTACT INFORMATION SECTION -->
+        <section id="contact" class="py-16">
+            <h2 class="text-4xl font-bold section-heading text-medium-accent mb-10">Connect & Collaborate</h2>
+            <div class="p-8 bg-card-bg text-bg-dark-main rounded-2xl shadow-2xl flex flex-col md:flex-row justify-around items-center gap-8 border border-gray-100">
+                
+                <div class="flex items-center space-x-3 text-lg text-bg-dark-main">
+                    <!-- Email Icon (Inline SVG) -->
+                    <svg class="w-6 h-6 text-highlight-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 12V8"></path></svg>
+                    <a href="mailto:florence.bullwright@gmail.com" class="hover:text-highlight-accent transition duration-300">florence.bullwright@gmail.com</a>
+                </div>
+
+                <div class="flex items-center space-x-3 text-lg text-bg-dark-main">
+                    <!-- LinkedIn Icon (Inline SVG Placeholder) -->
+                    <svg class="w-6 h-6 text-highlight-accent" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 0H2C.9 0 0 .9 0 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM8 19H5V8h3v11zM6.5 6.87c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM22 19h-3v-5.63c0-3.37-4-3.53-4 0V19h-3V8h3v1.88c1.39-2.52 7-2.31 7 3.52V19z"/></svg>
+                    <a href="https://www.linkedin.com/in/florencebullwright/" target="_blank" class="hover:text-highlight-accent transition duration-300">Florence Bullwright</a>
+                </div>
+
+                <div class="flex items-center space-x-3 text-lg text-bg-dark-main">
+                    <!-- GitHub Icon (Inline SVG) -->
+                    <svg class="w-6 h-6 text-highlight-accent" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.11.82-.26.82-.57 0-.285-.015-1.04-.015-2.04-3.33.725-4.04-1.6-4.04-1.6-.545-1.38-1.33-1.755-1.33-1.755-1.09-.745.085-.73.085-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.838 2.805 1.305 3.495 1 .11-.77.415-1.305.755-1.605-2.665-.3-5.464-1.33-5.464-5.915 0-1.305.465-2.375 1.238-3.21-.125-.3-.545-1.52 0-3.16 0 0 1.005-.32 3.3.99.955-.265 1.98-.4 3.005-.405 1.025 0 2.05.135 3.005.405 2.29-1.31 3.3-.99 3.3-.99.545 1.64.125 2.86.01 3.16.77.835 1.235 1.905 1.235 3.21 0 4.595-2.8 5.61-5.47 5.91.42.36.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .31.215.685.82.57C20.57 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z" clip-rule="evenodd"/></svg>
+                    <a href="https://github.com/fbullwright2" target="_blank" class="hover:text-highlight-accent transition duration-300">fbullwright2</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-gray-500 border-t border-medium-accent/50">
+            &copy; 2025 Florence Bullwright. All rights reserved. | Built with purpose and Tailwind CSS.
+        </footer>
+
+    </main>
+
+    <script>
+        // Function to handle tab switching logic
+        function showProject(tabId) {
+            // 1. Hide all content panels
+            document.querySelectorAll('.project-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+
+            // 2. Deactivate all buttons (set to default background)
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('bg-highlight-accent', 'text-bg-dark-main');
+                button.classList.add('bg-bg-dark-main', 'text-text-light');
+                button.style.zIndex = 1; 
+            });
+
+            // 3. Show the target content panel
+            const targetPanel = document.getElementById('project-panel-' + tabId);
+            if (targetPanel) {
+                targetPanel.classList.remove('hidden');
+            }
+
+            // 4. Activate the clicked button (set to highlight color)
+            const targetButton = document.getElementById('tab-button-' + tabId);
+            if (targetButton) {
+                targetButton.classList.remove('bg-bg-dark-main', 'text-text-light');
+                targetButton.classList.add('bg-highlight-accent', 'text-bg-dark-main');
+                // Use a higher z-index for the active tab
+                targetButton.style.zIndex = 10; 
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set up listeners for all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                const tabId = button.getAttribute('data-tab-id');
+                button.addEventListener('click', () => showProject(tabId));
+            });
+
+            // Show the first tab by default
+            showProject('water'); 
+        });
+    </script>
+</body>
+</html>
